@@ -1,6 +1,6 @@
 # Event-Driven Notification System
 
-## 🚀 Overview
+## Overview
 
 This project implements a fully containerized **Event-Driven Notification System** using:
 
@@ -20,7 +20,7 @@ The system follows **Event-Driven Architecture (EDA)** principles to ensure:
 
 ---
 
-## 🏗 Architecture Overview
+## Architecture Overview
 
 ```
 
@@ -56,7 +56,7 @@ PostgreSQL Database
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 
@@ -71,7 +71,7 @@ README.md
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - Python 3.11
 - FastAPI
@@ -85,7 +85,7 @@ README.md
 
 ---
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 Create `.env` from `.env.example`:
 
@@ -108,9 +108,9 @@ RABBITMQ_PASSWORD=guest
 
 ---
 
-## 🐳 Running the Application
+## Running the Application
 
-### 1️⃣ Build & Start
+### Build & Start
 
 ```bash
 docker-compose up --build
@@ -125,7 +125,7 @@ All services will start:
 
 ---
 
-## 🏥 Health Checks
+## Health Checks
 
 Check API health:
 
@@ -141,7 +141,7 @@ Expected:
 
 ---
 
-## 📤 API Documentation
+## API Documentation
 
 ### POST `/api/events`
 
@@ -182,7 +182,7 @@ Returns:
 
 ---
 
-## 📥 Consumer Behavior
+## Consumer Behavior
 
 The consumer:
 
@@ -194,7 +194,7 @@ The consumer:
 
 ---
 
-## 🗄 Database Schema
+## Database Schema
 
 Defined in `db/init.sql`
 
@@ -213,7 +213,7 @@ CREATE TABLE processed_events (
 
 ---
 
-## 🔁 Idempotency Strategy
+## Idempotency Strategy
 
 The consumer prevents duplicate processing using:
 
@@ -228,7 +228,7 @@ If the same event is processed multiple times:
 
 ---
 
-## ❗ Error Handling
+## Error Handling
 
 ### API
 
@@ -245,7 +245,7 @@ If the same event is processed multiple times:
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ### Backend Tests
 
@@ -263,7 +263,7 @@ All tests must pass before submission.
 
 ---
 
-## 🔍 Verifying System Works
+## Verifying System Works
 
 ### Publish Event
 
@@ -287,7 +287,7 @@ docker-compose exec db psql -U notiuser -d notification_db \
 
 ---
 
-## 🛡 Reliability Guarantees
+## Reliability Guarantees
 
 * Durable queue
 * Persistent messages
@@ -298,7 +298,7 @@ docker-compose exec db psql -U notiuser -d notification_db \
 
 ---
 
-## 🧠 Why Event-Driven Architecture?
+## Why Event-Driven Architecture?
 
 Event-driven systems provide:
 
@@ -312,7 +312,7 @@ This architecture ensures the API remains responsive even under heavy load.
 
 ---
 
-## 📌 Common Pitfalls Avoided
+## Common Pitfalls Avoided
 
 ✔ API does NOT write to DB directly
 ✔ No blocking API calls
@@ -324,7 +324,7 @@ This architecture ensures the API remains responsive even under heavy load.
 
 ---
 
-## 🏁 One-Command Setup
+## One-Command Setup
 
 ```bash
 docker-compose up --build
